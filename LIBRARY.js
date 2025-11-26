@@ -20,3 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdown.classList.remove('active');
   });
 });
+
+// Toggle image left / right for the .media-row block
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('toggleImageBtn');
+  const mediaRow = document.getElementById('mediaRow1');
+
+  if (toggleBtn && mediaRow) {
+    toggleBtn.addEventListener('click', () => {
+      mediaRow.classList.toggle('reverse');
+
+      // Optional: update button text for clarity
+      if (mediaRow.classList.contains('reverse')) {
+        toggleBtn.textContent = 'Move image back';
+      } else {
+        toggleBtn.textContent = '𐔌՞. .՞𐦯';
+      }
+    });
+  }
+});
+
